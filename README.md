@@ -1,2 +1,2 @@
-# CART
-Clean Atomic React Toolkit
+# CARBo
+Clean Atomic React Boilerplate

@@ -4,7 +4,7 @@ import './App.css';
 function App() {
   return (
     <div>
-      Clean Atomic React Toolkit
+      Clean Atomic React Boilerplate
     </div>
   );
 }
