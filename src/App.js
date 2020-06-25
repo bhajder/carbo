@@ -1,11 +1,12 @@
-import React from 'react';
+import React, { Fragment } from 'react';
+import AppRouter from './routers/AppRouter';
 import './App.css';
 
 function App() {
   return (
-    <div>
-      Clean Atomic React Boilerplate
-    </div>
+    <Fragment>
+      <AppRouter />
+    </Fragment>
   );
 }
 
