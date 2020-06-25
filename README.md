@@ -1,1 +1,2 @@
-CART - Clean Atomic React Toolkit
+#CART
+Clean Atomic React Toolkit
