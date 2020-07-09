@@ -1,11 +1,15 @@
-import React, { Fragment } from 'react';
-
+import React from 'react';
 import { StyledTitle } from './title.styled.js';
+import PropTypes from 'prop-types';
 
-const Title = () => {
+const Title = ({ text }) => {
     return (
-        <StyledTitle />
+        <StyledTitle>{text}</StyledTitle>
     )
+}
+
+Title.propTypes = {
+    text: PropTypes.string,
 }
 
 export default Title;

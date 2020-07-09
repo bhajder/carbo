@@ -1,13 +1,16 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import AppRouter from './routers/AppRouter';
-import './App.css';
+
+import { ThemeProvider } from 'styled-components';
+import { withTheme } from 'styled-components';
+import theme from 'theme/index.js';
 
 function App() {
   return (
-    <Fragment>
+    <ThemeProvider theme={theme}>
       <AppRouter />
-    </Fragment>
+    </ThemeProvider>
   );
 }
 
-export default App;
+export default withTheme(App);

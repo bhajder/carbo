@@ -1,2 +1,2 @@
-# CARBo
+# CARBO
 Clean Atomic React Boilerplate
