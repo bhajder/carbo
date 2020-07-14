@@ -9,3 +9,8 @@ export const StyledHeader = styled.header`
     display: flex;
     align-items: center;
 `;
+
+export const StyledLogo = styled.img`
+    width: 120px;
+    margin-right: 100px;
+`;

@@ -1,6 +1,7 @@
 import React from 'react';
-import { StyledHeader } from './header.styled';
+import { StyledHeader, StyledLogo } from './header.styled';
 
+import Logo from 'assets/images/CARBO.png';
 import Button from 'components/atoms/Button';
 import Navigation from 'components/molecules/Navigation';
 
@@ -35,6 +36,7 @@ const Header = () => {
 
     return (
         <StyledHeader>
+            <StyledLogo src={Logo} alt="logo"/>
             <Navigation navLinks={navLinks} />
             <Button color="secondary">button</Button>
         </StyledHeader>
