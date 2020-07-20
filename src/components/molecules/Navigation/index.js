@@ -3,10 +3,10 @@ import { StyledNavigation } from './navigation.styled';
 
 import Link from 'components/atoms/Link';
 
-const Navigation = ({ navLinks }) => {
+const Navigation = ({ navLinks, vertical }) => {
     return (
-        <StyledNavigation>
-            {navLinks.map(navLink => (
+        <StyledNavigation vertical={vertical}>
+            {navLinks && navLinks.map(navLink => (
                 <Link page={navLink.page} label={navLink.label} />
             ))}
         </StyledNavigation>
