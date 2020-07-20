@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const StyledLink = styled.a`
+    font-family: ${props => props.theme.fonts.main};
     color: ${props => props.theme.colors.primary};
     text-decoration: none;
     display: inline-block;
@@ -11,5 +12,6 @@ export const StyledLink = styled.a`
     &:hover {
         color: ${props => props.theme.colors.secondary};
         transition: color .1s ease;
+        cursor: pointer;
     }
 `;

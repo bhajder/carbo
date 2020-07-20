@@ -10,6 +10,7 @@ export const StyledButton = styled.button`
     height: 50px;
     border-radius: 30px;
     background-color: #36413E;
+    font-family: ${props => props.theme.fonts.main};
     color: ${props => props.theme.colors.white};
     box-sizing: border-box;
     margin: 5px;
@@ -17,13 +18,16 @@ export const StyledButton = styled.button`
 
     &:hover {
         cursor: pointer;
+        transition: background-color .2s ease, color .2s ease;
     }
 
     ${props => 
         props.color === 'primary' &&
             css`
                 background-color: ${props.theme.colors.primary};
-                &:hover {}
+                &:hover {
+                    background-color: #111122;
+                }
             `}
             
     ${props => 
@@ -32,9 +36,15 @@ export const StyledButton = styled.button`
                 background-color: ${props.theme.colors.secondary};
                 &:hover {
                     background-color: ${props.theme.colors.secondaryAlt};
-                    transition: background-color .2s ease;
                 }
             `}
 
-    
+    ${props => 
+        props.color === 'secondaryAlt' &&
+            css`
+                background-color: ${props.theme.colors.secondaryAlt};
+                &:hover {
+                    background-color: ${props.theme.colors.secondary};
+                }
+            `}
 `;

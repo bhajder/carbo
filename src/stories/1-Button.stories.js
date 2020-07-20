@@ -1,18 +1,26 @@
 import React from 'react';
-import { action } from '@storybook/addon-actions';
-import { Button } from '@storybook/react/demo';
+import Button from 'components/atoms/Button';
+import { withKnobs, select } from '@storybook/addon-knobs';
 
 export default {
-  title: 'Button',
+  title: 'Atoms/Button',
   component: Button,
+  decorators: [withKnobs]
 };
 
-export const Text = () => <Button onClick={action('clicked')}>Hello Button</Button>;
+const label = 'Colors';
+const options = {
+  Primary: 'primary',
+  Secondary: 'secondary',
+  SecondaryAlt: 'secondaryAlt'
+}
+const defaultValue = options.Primary;
+const groupId = 'GRP_BTN';
 
-export const Emoji = () => (
-  <Button onClick={action('clicked')}>
-    <span role="img" aria-label="so cool">
-      😀 😎 👍 💯
-    </span>
-  </Button>
-);
+export const Text = () => {
+
+  const colorValue = select(label, options, defaultValue, groupId);
+  return (
+    <Button color={colorValue}>Hello Button</Button>
+  )
+}

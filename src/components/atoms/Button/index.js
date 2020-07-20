@@ -12,6 +12,7 @@ Button.propTypes = {
     color: PropTypes.oneOf([
         'primary',
         'secondary',
+        'secondaryAlt'
     ])
 }
 
